@@ -23,7 +23,7 @@ export default defineConfig({
           query: ["@tanstack/react-query"],
           ui: ["@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
           charts: ["recharts"],
-          forms: ["@react-hook-form"],
+          forms: ["react-hook-form"],
         },
       },
     },
