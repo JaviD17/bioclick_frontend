@@ -77,7 +77,7 @@ function AuthPage() {
         });
 
         toast.success(
-          `Account created successfully! Welcome to LinkTree Clone, ${formData.username}!`
+          `Account created successfully! Welcome to BioTap, ${formData.username}!`
         );
       }
 
