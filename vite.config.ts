@@ -12,25 +12,9 @@ export default defineConfig({
     }),
     tanstackStart(),
   ],
-  build: {
-    minify: "terser",
-    sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["@tanstack/react-router"],
-          query: ["@tanstack/react-query"],
-          ui: ["@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
-          charts: ["recharts"],
-          forms: ["react-hook-form"],
-        },
-      },
-    },
-  },
   define: {
     "process.env.NODE_ENV": JSON.stringify(
-      process.env.NODE_ENV || "development"
+      process.env.NODE_ENV || "production"
     ),
   },
 });
