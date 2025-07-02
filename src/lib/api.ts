@@ -126,7 +126,7 @@ export interface PasswordResetConfirm {
 const getApiBaseUrl = (): string => {
   // Production URL
   if (import.meta.env.PROD) {
-    return import.meta.env.VITE_API_BASE_URL || "https://your-api-domain.com";
+    return import.meta.env.VITE_API_BASE_URL || "https://biotap-backend.onrender.com";
   }
 
   // Development URL
