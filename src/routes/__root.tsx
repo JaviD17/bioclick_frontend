@@ -9,7 +9,7 @@ import {
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { DefaultCatchBoundary } from "~/components/DefaultCatchBoundary";
 import { NotFound } from "~/components/NotFound";
@@ -35,12 +35,16 @@ const queryClient = new QueryClient({
 
 function Navbar() {
   const { user, logout, isAuthenticated } = useAuth();
+  const [isMounted, setIsMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    setIsMounted(true);
+  });
+
   const toggleMobileMenu = () => {
-    console.log("Menu clicked, current state:", isMobileMenuOpen);
+    console.log("Menu clicked");
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    console.log("Menu new state:", isMobileMenuOpen);
   };
 
   return (
@@ -116,7 +120,7 @@ function Navbar() {
             <Button
               variant={"ghost"}
               size={"sm"}
-              onClick={toggleMobileMenu}
+              onClick={isMounted ? toggleMobileMenu : undefined}
               className="h-9 w-9 p-0"
             >
               {isMobileMenuOpen ? (
