@@ -37,7 +37,11 @@ function Navbar() {
   const { user, logout, isAuthenticated } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMobileMenu = () => {
+    console.log("Menu clicked, current state:", isMobileMenuOpen);
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    console.log("Menu new state:", isMobileMenuOpen);
+  };
 
   return (
     <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
