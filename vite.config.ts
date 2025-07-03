@@ -10,7 +10,7 @@ export default defineConfig({
     tsConfigPaths({
       projects: ["./tsconfig.json"],
     }),
-    tanstackStart(),
+    tanstackStart({ target: "netlify" }),
   ],
   define: {
     "process.env.NODE_ENV": JSON.stringify(
