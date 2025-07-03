@@ -35,14 +35,7 @@ const queryClient = new QueryClient({
 
 function Navbar() {
   const { user, logout, isAuthenticated } = useAuth();
-  const [isMounted, setIsMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  console.log("NavBAR component executing");
-
-  useEffect(() => {
-    console.log("NAVBAR MOUNTED ON CLIENT");
-    setIsMounted(true);
-  }, []);
 
   const toggleMobileMenu = () => {
     console.log("Menu clicked");
@@ -122,7 +115,7 @@ function Navbar() {
             <Button
               variant={"ghost"}
               size={"sm"}
-              onClick={isMounted ? toggleMobileMenu : undefined}
+              onClick={toggleMobileMenu}
               className="h-9 w-9 p-0"
             >
               {isMobileMenuOpen ? (
@@ -310,9 +303,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                 <>
                   <TanStackRouterDevtools position="bottom-right" />
                   <ReactQueryDevtools initialIsOpen={false} />
-                  <Scripts />
                 </>
               )}
+              <Scripts />
               <Toaster
                 position="top-right"
                 richColors
