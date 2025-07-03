@@ -126,7 +126,7 @@ export interface PasswordResetConfirm {
 const getApiBaseUrl = (): string => {
   // Production URL
   if (import.meta.env.PROD) {
-    return import.meta.env.VITE_API_BASE_URL || "https://biotap-backend.onrender.com";
+    return import.meta.env.VITE_API_BASE_URL || "https://bioclick-backend.onrender.com";
   }
 
   // Development URL
@@ -135,7 +135,7 @@ const getApiBaseUrl = (): string => {
 
 // ===== CONSTANTS =====
 const DEFAULT_BASE_URL = getApiBaseUrl();
-const TOKEN_KEY = "biotap_token" as const;
+const TOKEN_KEY = "bioclick_token" as const;
 
 // ===== UTILITY FUNCTIONS =====
 const isClientSide = (): boolean => typeof window !== "undefined";

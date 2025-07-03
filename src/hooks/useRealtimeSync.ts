@@ -55,7 +55,7 @@ export function useCrossTabSync(queryKeys: string[][]) {
   useEffect(() => {
     const handleStorageChange = (e: StorageEvent) => {
       // Listen for custom sync events
-      if (e.key === "biotap-sync" && e.newValue) {
+      if (e.key === "bioclick-sync" && e.newValue) {
         const syncData = JSON.parse(e.newValue);
 
         // Invalidate specific queries based on sync event
@@ -74,14 +74,14 @@ export function useCrossTabSync(queryKeys: string[][]) {
   // Function to trigger sync across tabs
   const triggerCrossTabSync = (type: "click" | "link" | "all" = "click") => {
     localStorage.setItem(
-      "biotap-sync",
+      "bioclick-sync",
       JSON.stringify({
         type,
         timestamp: Date.now(),
       })
     );
     // Remove after a short delay to trigger event
-    setTimeout(() => localStorage.removeItem("biotap-sync"), 100);
+    setTimeout(() => localStorage.removeItem("bioclick-sync"), 100);
   };
   return { triggerCrossTabSync };
 }

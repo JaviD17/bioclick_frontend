@@ -192,7 +192,7 @@ function FeaturesSection() {
             <div className="pt-4">
               <Link to="/auth">
                 <Button className={BUTTON_STYLES.cta}>
-                  Create Your Link Tree
+                  Create Your Links
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>

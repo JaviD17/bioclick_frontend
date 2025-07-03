@@ -312,7 +312,7 @@ function PublicProfile() {
 
         {/* ===== FOOTER ===== */}
         <div className="text-center mt-12 text-xs text-muted-foreground">
-          <p>Powered by BioTap</p>
+          <p>Powered by BioClick</p>
         </div>
       </div>
     </div>

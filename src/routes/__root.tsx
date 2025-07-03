@@ -49,7 +49,7 @@ function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-full bg-gradient-to-r from-primary to-accent" />
-            <span className="text-xl font-bold">BioTap</span>
+            <span className="text-xl font-bold">BioClick</span>
           </Link>
 
           {/* Desktop Navigation */}
