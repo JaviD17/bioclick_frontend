@@ -37,10 +37,12 @@ function Navbar() {
   const { user, logout, isAuthenticated } = useAuth();
   const [isMounted, setIsMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  console.log("NavBAR component executing");
 
   useEffect(() => {
+    console.log("NAVBAR MOUNTED ON CLIENT");
     setIsMounted(true);
-  });
+  }, []);
 
   const toggleMobileMenu = () => {
     console.log("Menu clicked");
