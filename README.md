@@ -1,72 +1,62 @@
-# Welcome to BioTap.xyz!
+# Welcome to BioClick!
 
-This site is built with TanStack Router!
+## Description
 
-- [TanStack Router Docs](https://tanstack.com/router)
+Frontend for BioClick, a link sharing platform with enhanced features like analytics dashboards and weekly email summaries.
 
-It's deployed automagically with Netlify!
+## Features
 
-- [Netlify](https://netlify.com/)
+- Feature 1: Description of the feature
+- Feature 2: Description of the feature
+- Feature 3: Description of the feature
 
-## Development
+## Installation
 
-From your terminal:
+Git clone this project and use pnpm to get up and running locally
 
-```sh
-pnpm install
+```zsh
+# Get started commands
+git clone https://github.com/JaviD17/bioclick_frontend.git
+cd bioclick_frontend
+pnpm install # or other dependency installation commands
+```
+
+## Usage
+
+Explain how to use the project, including any commands or steps to run it.
+
+```zsh
+# Start running on localhost:3000
 pnpm dev
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+## Configuration
 
-## Editing and previewing the docs of TanStack projects locally
+Describe any configuration steps, environment variables, or settings users need to adjust.
 
-The documentations for all TanStack projects except for `React Charts` are hosted on [https://tanstack.com](https://tanstack.com), powered by this TanStack Router app.
-In production, the markdown doc pages are fetched from the GitHub repos of the projects, but in development they are read from the local file system.
-
-Follow these steps if you want to edit the doc pages of a project (in these steps we'll assume it's [`TanStack/form`](https://github.com/tanstack/form)) and preview them locally :
-
-1. Create a new directory called `tanstack`.
-
-```sh
-mkdir tanstack
+```zsh
+# Configure .env or .env.local - look at .env.example for guidance
+VITE_API_BASE_URL=http://127.0.0.1:8000
+VITE_API_ENV=development
 ```
 
-2. Enter the directory and clone this repo and the repo of the project there.
+## Contributing
 
-```sh
-cd tanstack
-git clone git@github.com:TanStack/tanstack.com.git
-git clone git@github.com:TanStack/form.git
-```
+Instructions for how others can contribute to your project.
 
-> [!NOTE]
-> Your `tanstack` directory should look like this:
->
-> ```
-> tanstack/
->    |
->    +-- form/
->    |
->    +-- tanstack.com/
-> ```
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Add some feature'`)
+5. Push to the branch (`git push origin feature-branch`)
+6. Create a Pull Request
 
-> [!WARNING]
-> Make sure the name of the directory in your local file system matches the name of the project's repo. For example, `tanstack/form` must be cloned into `form` (this is the default) instead of `some-other-name`, because that way, the doc pages won't be found.
+## License
 
-3. Enter the `tanstack/tanstack.com` directory, install the dependencies and run the app in dev mode:
+This project is licensed under the [License Name] - see the [LICENSE](LICENSE) file for details.
 
-```sh
-cd tanstack.com
-pnpm i
-# The app will run on https://localhost:3000 by default
-pnpm dev
-```
+## Contact
 
-4. Now you can visit http://localhost:3000/form/latest/docs/overview in the browser and see the changes you make in `tanstack/form/docs`.
-
-> [!NOTE]
-> The updated pages need to be manually reloaded in the browser.
-
-> [!WARNING]
-> You will need to update the `docs/config.json` file (in the project's repo) if you add a new doc page!
+- Javier: [Your Email]
+- Project Link: [https://github.com/JaviD17/bioclick_frontend]
+- Additional Contact Info: [e.g., Twitter, Website]
