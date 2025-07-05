@@ -91,6 +91,10 @@ function GeographicAnalyticsPage() {
   const { user } = useAuth();
   const [selectedRange, setSelectedRange] = useState(TIME_RANGES[1]); // Default: 30d
 
+  console.log("🚀 GeographicAnalyticsPage rendering");
+  console.log("👤 User:", user);
+  console.log("🔐 User ID:", user?.id);
+
   const {
     data: geographic,
     isLoading,
