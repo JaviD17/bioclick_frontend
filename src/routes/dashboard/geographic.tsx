@@ -92,7 +92,7 @@ function GeographicAnalyticsPage() {
   const [selectedRange, setSelectedRange] = useState(TIME_RANGES[1]); // Default: 30d
 
   const {
-    data: geopgraphic,
+    data: geographic,
     isLoading,
     error,
     refetch,
@@ -110,9 +110,9 @@ function GeographicAnalyticsPage() {
 
   if (isLoading) return <LoadingState />;
   if (error) return <div>Error loading geographic data</div>;
-  if (!geopgraphic) return null;
+  if (!geographic) return null;
 
-  const topCountry = geopgraphic.top_countries[0];
+  const topCountry = geographic.top_countries[0];
 
   return (
     <div className="space-y-8">
@@ -150,8 +150,8 @@ function GeographicAnalyticsPage() {
       <div className="grid gap-4 md:grid-cols-4">
         <MetricCard
           title="Countries Reached"
-          value={geopgraphic.total_countries.toString()}
-          subtitle={`Active in ${geopgraphic.total_countries} countries`}
+          value={geographic.total_countries.toString()}
+          subtitle={`Active in ${geographic.total_countries} countries`}
           icon={Globe}
         />
 
@@ -168,7 +168,7 @@ function GeographicAnalyticsPage() {
 
         <MetricCard
           title="International Clicks"
-          value={geopgraphic.top_countries
+          value={geographic.top_countries
             .reduce((sum, country) => sum + country.clicks, 0)
             .toLocaleString()}
           subtitle="From geolocated visitors"
@@ -177,7 +177,7 @@ function GeographicAnalyticsPage() {
 
         <MetricCard
           title="Global Visitors"
-          value={geopgraphic.top_countries
+          value={geographic.top_countries
             .reduce((sum, country) => country.unique_visitors, 0)
             .toLocaleString()}
           subtitle="Unique international visitors"
@@ -198,9 +198,9 @@ function GeographicAnalyticsPage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            {geopgraphic.top_countries.length > 0 ? (
+            {geographic.top_countries.length > 0 ? (
               <WorldMap
-                countryData={geopgraphic.top_countries}
+                countryData={geographic.top_countries}
                 className="h-[400px] w-full rounded-lg"
               />
             ) : (
@@ -230,9 +230,9 @@ function GeographicAnalyticsPage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            {geopgraphic.top_countries.length > 0 ? (
+            {geographic.top_countries.length > 0 ? (
               <div className="space-y-4">
-                {geopgraphic.top_countries.map((country, index) => (
+                {geographic.top_countries.map((country, index) => (
                   <div
                     key={country.country_code}
                     className="flex items-center justify-between"
@@ -280,9 +280,9 @@ function GeographicAnalyticsPage() {
             <CardDescription>International clicks over time</CardDescription>
           </CardHeader>
           <CardContent>
-            {geopgraphic.geographic_trends.length > 0 ? (
+            {geographic.geographic_trends.length > 0 ? (
               <ResponsiveContainer width={"100%"} height={200}>
-                <LineChart data={geopgraphic.geographic_trends}>
+                <LineChart data={geographic.geographic_trends}>
                   <CartesianGrid
                     strokeDasharray={"3 3"}
                     className="opacity-30"
