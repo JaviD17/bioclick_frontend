@@ -38,7 +38,6 @@ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    console.log("Menu clicked");
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
