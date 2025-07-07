@@ -42,6 +42,11 @@ const TIME_RANGES = [
   { label: "Last year", value: "1y", days: 365 },
 ];
 
+const QUERY_CONFIG = {
+  staleTime: 5 * 60 * 1000, // 5 minutes
+  refetchInterval: 5 * 60 * 1000, // Auto-refetch every 5 minutes
+} as const;
+
 function MetricCard({
   title,
   value,
@@ -91,10 +96,6 @@ function GeographicAnalyticsPage() {
   const { user } = useAuth();
   const [selectedRange, setSelectedRange] = useState(TIME_RANGES[1]); // Default: 30d
 
-  console.log("🚀 GeographicAnalyticsPage rendering");
-  console.log("👤 User:", user);
-  console.log("🔐 User ID:", user?.id);
-
   const {
     data: geographic,
     isLoading,
@@ -104,7 +105,7 @@ function GeographicAnalyticsPage() {
     queryKey: ["geographic-analytics", user?.id, selectedRange.days],
     queryFn: () => apiClient.getGeographicAnalytics(selectedRange.days),
     enabled: !!user?.id,
-    staleTime: 5 * 60 * 1000, // 5 minutes
+    ...QUERY_CONFIG,
   });
 
   const handleTimeRangeChange = (value: string) => {
