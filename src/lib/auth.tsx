@@ -9,7 +9,7 @@ import {
 import { apiClient, type User, type UserLogin, type UserRegister } from "./api";
 
 // ===== CONSTANTS =====
-const TOKEN_KEY = "token" as const;
+const TOKEN_KEY = "bioclick_token" as const;
 
 // ===== TYPES =====
 interface AuthContextType {
