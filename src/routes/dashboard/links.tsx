@@ -103,7 +103,7 @@ const getMaxDisplayOrder = (links: Link[]) => {
 const extractFormData = (formData: FormData): LinkFormData => ({
   title: formData.get("title") as string,
   url: formData.get("url") as string,
-  description: (formData.get("description") as string) || undefined,
+  description: (formData.get("description") as string) || "",
   is_active: formData.get("is_active") === "on",
 });
 
