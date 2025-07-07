@@ -69,6 +69,13 @@ function Navbar() {
                   </Button>
                 </Link>
 
+                <Link to="/dashboard/geographic">
+                  <Button variant={"ghost"} size={"sm"}>
+                    <BarChart3 className="mr-2 h-4 w-4" />
+                    Geo-Analytics
+                  </Button>
+                </Link>
+
                 <Link to="/profile">
                   <Button variant={"ghost"} size={"sm"}>
                     <User className="mr-2 h-4 w-4" />
@@ -165,6 +172,20 @@ function Navbar() {
                     >
                       <BarChart3 className="mr-2 h-4 w-4" />
                       Analytics
+                    </Button>
+                  </Link>
+
+                  <Link
+                    to="/dashboard/geographic"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <Button
+                      variant={"ghost"}
+                      size={"sm"}
+                      className="w-full justify-start"
+                    >
+                      <BarChart3 className="mr-2 h-4 w-4" />
+                      Geo-Analytics
                     </Button>
                   </Link>
 
