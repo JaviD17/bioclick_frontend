@@ -57,6 +57,6 @@ This project is licensed under the [License Name] - see the [LICENSE](LICENSE) f
 
 ## Contact
 
-- Javier: [Your Email]
+- Javier: [info@bioblick.xyz]
 - Project Link: [https://github.com/JaviD17/bioclick_frontend]
 - Additional Contact Info: [e.g., Twitter, Website]
