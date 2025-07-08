@@ -139,9 +139,14 @@ function HeroSection() {
       </h1>
 
       <img
-        src="/favicon.png"
+        src="/favicon-light.png"
         alt="BioClick Logo"
-        className="h-48 w-48 sm:h-96 sm:w-96 object-contain mx-auto mt-4"
+        className="h-48 w-48 sm:h-96 sm:w-96 object-contain dark:hidden"
+      />
+      <img
+        src="/favicon-dark.png"
+        alt="BioClick Logo"
+        className="h-48 w-48 sm:h-96 sm:w-96 object-contain hidden dark:block"
       />
 
       <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">

@@ -48,9 +48,14 @@ function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="/favicon.png"
+              src="/favicon-light.png"
               alt="BioClick Logo"
-              className="h-8 w-8 object-contain"
+              className="h-8 w-8 object-contain dark:hidden"
+            />
+            <img
+              src="/favicon-dark.png"
+              alt="BioClick Logo"
+              className="h-8 w-8 object-contain hidden dark:block"
             />
             <span className="text-xl font-bold">BioClick</span>
           </Link>
