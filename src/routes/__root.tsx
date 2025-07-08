@@ -48,12 +48,12 @@ function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="/favicon-light.png"
+              src="/favicon-dark.png"
               alt="BioClick Logo"
               className="h-8 w-8 object-contain dark:hidden"
             />
             <img
-              src="/favicon-dark.png"
+              src="/favicon-light.png"
               alt="BioClick Logo"
               className="h-8 w-8 object-contain hidden dark:block"
             />
