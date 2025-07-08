@@ -133,10 +133,16 @@ function HeroSection() {
 
       <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
         One link to rule
-        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
           them all
         </span>
       </h1>
+
+      <img
+        src="/favicon.png"
+        alt="BioClick Logo"
+        className="h-48 w-48 sm:h-96 sm:w-96 object-contain mx-auto mt-4"
+      />
 
       <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
         Connect your audience to all of your content with one simple link in
