@@ -47,7 +47,12 @@ function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-full bg-gradient-to-r from-primary to-accent" />
+            {/* <div className="h-8 w-8 rounded-full bg-gradient-to-r from-primary to-accent" /> */}
+            <img
+              src="/favicon.png"
+              alt="BioClick Logo"
+              className="h-8 w-8 object-contain"
+            />
             <span className="text-xl font-bold">BioClick</span>
           </Link>
 
