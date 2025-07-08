@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "~/components/ui/button";
 import { Separator } from "~/components/ui/separator";
 
@@ -12,10 +12,14 @@ function RouteComponent() {
       <div className="border text-center rounded space-y-6 py-8">
         <div>
           <h1 className="font-bold text-3xl tracking-wide">Demo Page</h1>
-          <p className="italic text-base tracking-tight text-muted-foreground">Under Construction</p>
+          <p className="italic text-base tracking-tight text-muted-foreground">
+            Under Construction
+          </p>
         </div>
         <Separator className="max-w-sm bg-current mx-auto" />
-        <Button size={"lg"}>Login</Button>
+        <Button size={"lg"} className="dark:border">
+          <Link to="/auth">Login</Link>
+        </Button>
       </div>
     </div>
   );
